@@ -10,19 +10,18 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:files-group.newGroup",
 		"onView:fileGroup"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "files-group.newGroup",
+				"command": "ninglo.files-group.newGroup",
 				"title": "New Group",
 				"icon": "$(new-folder)"
 			},
 			{
-				"command": "files-group.remove",
+				"command": "ninglo.files-group.remove",
 				"title": "Remove"
 			}
 		],
@@ -39,14 +38,14 @@
 		"menus": {
 			"view/title": [
 				{
-					"command": "files-group.newGroup",
+					"command": "ninglo.files-group.newGroup",
 					"when": "view == fileGroup",
 					"group": "navigation"
 				}
 			],
 			"view/item/context": [
 				{
-					"command": "files-group.remove",
+					"command": "ninglo.files-group.remove",
 					"when": "view == fileGroup"
 				}
 			]

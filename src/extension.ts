@@ -16,14 +16,14 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(fileGroupTreeView)
 
 	context.subscriptions.push(vscode.commands.registerCommand(
-		'files-group.newGroup',
+		'ninglo.files-group.newGroup',
 		async () => {
 			fileGroupTreeProvider.createNewGroup({})
 		}
 	))
 
 	context.subscriptions.push(vscode.commands.registerCommand(
-		'files-group.remove',
+		'ninglo.files-group.remove',
 		(item: TreeItem, elements?: TreeItem[]) => {
 			if (elements) {
 				fileGroupTreeProvider.remove(...elements)
