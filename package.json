@@ -20,6 +20,10 @@
 				"command": "files-group.newGroup",
 				"title": "New Group",
 				"icon": "$(new-folder)"
+			},
+			{
+				"command": "files-group.remove",
+				"title": "Remove"
 			}
 		],
 		"views": {
@@ -38,6 +42,12 @@
 					"command": "files-group.newGroup",
 					"when": "view == fileGroup",
 					"group": "navigation"
+				}
+			],
+			"view/item/context": [
+				{
+					"command": "files-group.remove",
+					"when": "view == fileGroup"
 				}
 			]
 		}
